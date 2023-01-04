@@ -1,11 +1,13 @@
 import useFormulario from "./hooks/useFormulario";
 import Input from "./components/Input";
+import Card from './components/Card'
 
 function App() {
   const [formulario, handleChange] = useFormulario({ name: "", lastname: "" });
   console.log(formulario);
   return (
-    <form>
+    <Card>
+      <form>
       <Input
         label="Nombre"
         name="name"
@@ -19,6 +21,7 @@ function App() {
         onChange={handleChange}
       />
     </form>
+    </Card>
   );
 }
 
